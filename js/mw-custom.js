@@ -185,13 +185,6 @@ try {
     pre.classList.add("fade-out");
   
     setTimeout(hidePrepage,2000);
-
-    setTimeout(() => {
-        const audio = document.getElementById("my_audio");
-        if (audio.paused) {
-            audio.play();
-        }
-      }, 2000);
   };    
   
   /* Hide preloader */
