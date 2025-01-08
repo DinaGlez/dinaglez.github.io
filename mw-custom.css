@@ -182,15 +182,6 @@ h6 {
     justify-content: center;
 }
 
-.back-to-top-btn {
-  font-size: 30px; 
-  color: #ff7b00;  
-  text-decoration: none;
-}
-
-.back-to-top-btn:hover {
-  color: #ff5722; 
-}
 .mw-btn  {
     text-transform: uppercase;
     font-family: var(--font-family);
