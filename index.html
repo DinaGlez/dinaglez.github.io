@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Page Title -->
-    <title> Mi Webdding </title>
+    <title> Nuestra Boda </title>
 
     <!-- Favicon and Touch Icons -->
     <link href="images/favicon/favicon.png" rel="shortcut icon" type="image/png">
@@ -68,6 +68,9 @@
     <link href="css/mw-custom.css" rel="stylesheet">
     <!--<link href="css/mw-custom-scss.css" rel="stylesheet">-->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-flaticon/css/font-flaticon.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -117,22 +120,36 @@
         <!-- end prepage -->
 
         <!--=== Music ===-->
-		<audio id="my_audio" controls loop>
-			<source src="music/musicfile.ogg" type="audio/ogg">
-			<source src="music/musicfile.mp3" type="audio/mp3">
-			<!--<source src="como-pagarte.mp3" type="audio/mpeg">-->
-			Your browser does not support the audio element.
-		</audio>
-	<!--=== End of music ===-->
+        <audio id="my_audio" preload="auto">
+            <source src="music/musicfile.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!--=== End of Music ===-->
 
-
-        <!-- strat music-box -->
+        <!-- Start Music Box -->
         <div class="music-box" id="music_box">
             <button class="music-box-toggle-btn" id="music-button">
                 <i class="fa fa-music"></i>
             </button>
         </div>
-        <!-- end music box -->
+        <!-- End Music Box -->
+
+        <script>
+    
+        const audio = document.getElementById("my_audio");
+        const musicButton = document.getElementById("music-button");
+    
+        musicButton.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                musicButton.innerHTML = '<i class="fa fa-pause"></i>'; // Cambia el icono
+            } else {
+                audio.pause();
+                musicButton.innerHTML = '<i class="fa fa-music"></i>'; // Cambia el icono
+            }
+        });
+        </script>
+
 
         <!-- start of hero -->
         <section class="hero">
@@ -284,7 +301,7 @@
                                 <h2 class="no-margin-bottom section-title">Ceremonia</h2>
                                 <h6 class="">15 de Febrero</h6>
                                 <p class="no-margin-bottom">12:40 PM – 14:30 PM</p>
-                                <p class="bold-text">Parroquia de la Milagrosa</p>
+                                <p class="bold-text">Basílica de la Milagrosa</p>
                                 <p class=""> Calle García de Paredes 45, Madrid.
                                 </p>
                                 <div>
@@ -507,7 +524,7 @@
                             <div>
                                 <h2 class="no-margin-bottom section-title">Código de vestimenta</h2>
                                 <h6 class="no-margin-bottom">Cocktail</h6>
-                                <h6 class="no-margin-bottom">No Color Blanco</h6>
+                                <h6 class="no-margin-bottom">El blanco está reservado para la novia, ¡pero tienes toda la paleta de colores para brillar!</h6>
                             </div>
                         </div>
                     </div>
@@ -623,7 +640,7 @@ c-3.1-2.6-7.2-2.4-10.8-0.5C233.9,103.1,232,106.3,232,111.2z"/></svg>
                                 <div class="story-text wow fadeInRightSlow">
                                     <h3 class="animate-text-color">Cóctel-Banquete</h3>
                                     <span class="date">15:00 - 19:00 pm</span>
-                                    <p>Cenar juntos hace esta noche especial.</p>
+                                    <p>Comer juntos hace este día especial.</p>
                                 </div>
                             </div>
                         </div>
@@ -850,12 +867,21 @@ c-3.1-2.6-7.2-2.4-10.8-0.5C233.9,103.1,232,106.3,232,111.2z"/></svg>
             <div class="col-lg-10">
                 <p class="text-center" style="font-size: 1.2rem; color: #4B6A39;">
                     El mejor regalo es compartir este día tan especial con ustedes. Para aquellos que desean hacernos un obsequio, 
-                    sepan que su presencia y cariño son lo más importante para nosotros. Si quieren celebrar este momento de una forma especial, 
-                    les agradecemos que lo hagan a su manera y con el corazón.
+                    sepan que su presencia y cariño son lo más importante para nosotros. Si además desean tener un detalle para celebrar este día con nosotros, les dejamos estos datos como una opción, siempre con el corazón como su mayor gesto:
                 </p>
                 <p class="text-center" style="font-size: 1.2rem; color: #4B6A39;">
-                    Número de cuenta: ES04 2100 2237 0102 0058 8493<br>
-                    Teléfono para Bizum: +34689871147
+                    <p>
+                        <strong>Número de cuenta:</strong> 
+                        <span class="copy-text" click="copyToClipboard('ES04 2100 2237 0102 0058 8493')">
+                            ES04 2100 2237 0102 0058 8493 
+                        </span>
+                    </p>
+                    <p>
+                        <strong>Teléfono para Bizum:</strong> 
+                        <span class="copy-text" click="copyToClipboard('+34 689 871 147')">
+                            +34 689 871 147
+                        </span>
+                    </p>
                 </p>
 
             
