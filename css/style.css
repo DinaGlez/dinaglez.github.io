@@ -2158,21 +2158,6 @@ a:focus {
   transform: translateX(-50%);
 }
 
-.back-to-top-btn {
-  position: fixed;
-  bottom: 20px; /* Ajusta la distancia desde el borde inferior */
-  left: 50%; /* Centra horizontalmente */
-  transform: translateX(-50%); /* Asegura que esté centrado completamente */
-  background-color: #000; /* Fondo oscuro para el botón */
-  color: #fff; /* Color del icono */
-  padding: 10px; /* Espaciado alrededor del icono */
-  border-radius: 50%; /* Hacerlo redondo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
 .site-footer .back-to-top a {
   display: inline-block;
   background: #fff;
